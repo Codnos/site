@@ -1,0 +1,128 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="vue.min.js"></script> 
+  <script type="text/javascript" src="blueimp-helper.js"></script> 
+  <script type="text/javascript" src="blueimp-gallery.min.js"></script> 
+  <script type="text/javascript" src="blueimp-gallery-fullscreen.js"></script> 
+  <script type="text/javascript" src="vue-gallery.min.js"></script> 
+  <script type="text/javascript" src="files.js"></script> 
+  <link rel="stylesheet" type="text/css" href="blueimp-gallery.min.css">
+
+<style id="compiled-css" type="text/css">
+	#app {
+		font-family: Avenir,Helvetica,Arial,sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	
+	.section-description {
+		width: 350px;
+	}
+
+	.section-container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	@media (max-width: 678px) {
+		.section-container {
+			flex-direction: column;
+		}		
+
+		.section {
+			flex-direction: column;
+		}
+	}
+
+    .image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		border: 1px solid #ebebeb;
+		margin: 0px 5px 5px 5px;
+		width: 300px;
+		height: 200px;
+	}
+</style>
+ 
+<script type="text/javascript">
+window.onload=function(){
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        filesData: [],
+        index: null
+      };
+    },
+ 
+    components: {
+      'gallery': VueGallery
+    },
+	
+	computed: {
+		imagesInFiles() {
+			return this.filesData.flatMap((section) => section.images);
+		}
+	},
+	
+	mounted: function() {
+		const filesData = files;
+		
+		let counter = 0;
+		const dataWithIndexes = [];
+		filesData.forEach((section) => {
+			const {images, ...rest} = section;
+			
+			const filesWithIndexes = images.map((image) => {
+				return {"index": counter++, ...image};
+			});
+			const newData = {
+				"images": filesWithIndexes,
+				...rest
+			};
+			dataWithIndexes.push(newData);
+		});
+		this.filesData = dataWithIndexes;
+	}
+  });
+}
+</script>
+  <title>Vue Gallery</title>
+</head>  
+<body>
+<div id="app">
+  <gallery :images="imagesInFiles" :index="index" @close="index = null"></gallery>
+  <div class="container">
+	  <div v-for="section in filesData" :key="section.title">
+		<h1>{{section.title}}</h1>
+		<div class="section-container">
+			<div class="section-description">
+				<span>{{section.description}}</span>
+			</div>
+			<div class="section">
+			  <div
+				class="image"
+				v-for="fileData in section.images"
+				:key="fileData.index"
+				@click="index = fileData.index"
+				:style="{ backgroundImage: 'url(' + fileData.href + ')' }"
+			  ></div>
+			</div>
+		</div>
+  </div>
+</div>
+</body>
+</html>
