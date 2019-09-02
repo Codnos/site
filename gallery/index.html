@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="js/blueimp-gallery.min.js"></script>
 	<script type="text/javascript" src="js/blueimp-gallery-fullscreen.js"></script>
 	<script type="text/javascript" src="js/vue-gallery.min.js"></script>
+	<script type="text/javascript" src="js/blueimp-gallery-audio.js"></script>
 	<script type="text/javascript" src="files.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/blueimp-gallery.min.css">
 
@@ -140,6 +141,14 @@
 
 		.blueimp-gallery>.indicator>li {
 			display: none;
+		}
+
+		.blueimp-gallery > .slides > .slide > .audio-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
 		}
 	</style>
 
