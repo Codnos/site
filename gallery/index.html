@@ -161,7 +161,11 @@
 
 				computed: {
 					imagesInFiles() {
-						return this.filesData.flatMap((section) => section.images);
+						const flatMap = (f,xs) =>
+							xs.reduce((acc,x) =>
+								acc.concat(f(x)), []);
+
+						return flatMap((section) => section.images, this.filesData);
 					}
 				},
 
@@ -171,17 +175,15 @@
 					let counter = 0;
 					const dataWithIndexes = [];
 					filesData.forEach((section) => {
-						let { images, ...rest } = section;
+						let images = section.images;
 						if (images === undefined || images === null) {
 							images = [];
 						}
+						const rest = Object.keys(section).filter(f => f !== 'images').reduce(function(prev,curr){prev[curr]=section[curr];return prev;},{});
 						const filesWithIndexes = images.map((image) => {
-							return { "index": counter++, ...image };
+							return Object.assign({ "index": counter++}, image);
 						});
-						const newData = {
-							"images": filesWithIndexes,
-							...rest
-						};
+						const newData = Object.assign({"images": filesWithIndexes}, rest);
 						dataWithIndexes.push(newData);
 					});
 					this.filesData = dataWithIndexes;
