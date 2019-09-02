@@ -2,6 +2,7 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="js/object-assign-polyfill.js"></script>
 	<script type="text/javascript" src="js/vue.min.js"></script>
 	<script type="text/javascript" src="js/blueimp-helper.js"></script>
 	<script type="text/javascript" src="js/blueimp-gallery.min.js"></script>
@@ -160,12 +161,8 @@
 				},
 
 				computed: {
-					imagesInFiles() {
-						const flatMap = (f,xs) =>
-							xs.reduce((acc,x) =>
-								acc.concat(f(x)), []);
-
-						return flatMap((section) => section.images, this.filesData);
+					imagesInFiles: function() {
+						return this.flatMap(function(section) {return section.images;}, this.filesData);
 					}
 				},
 
@@ -174,13 +171,13 @@
 
 					let counter = 0;
 					const dataWithIndexes = [];
-					filesData.forEach((section) => {
+					filesData.forEach(function(section) {
 						let images = section.images;
 						if (images === undefined || images === null) {
 							images = [];
 						}
-						const rest = Object.keys(section).filter(f => f !== 'images').reduce(function(prev,curr){prev[curr]=section[curr];return prev;},{});
-						const filesWithIndexes = images.map((image) => {
+						const rest = Object.keys(section).filter(function(f) {return f !== 'images';}).reduce(function(prev,curr){prev[curr]=section[curr];return prev;},{});
+						const filesWithIndexes = images.map(function(image) {
 							return Object.assign({ "index": counter++}, image);
 						});
 						const newData = Object.assign({"images": filesWithIndexes}, rest);
@@ -190,30 +187,33 @@
 				},
 
 				methods: {
-					getStyle(fileData) {
+					flatMap: function(f,xs) {
+							return xs.reduce(function(acc,x) {return acc.concat(f(x));}, []);
+					},
+					getStyle: function(fileData) {
 						if (fileData.type) {
 							return { backgroundImage: 'url(img/play.png)' };
 						} else {
 							return { backgroundImage: 'url(' + fileData.href + ')' };
 						}
 					},
-					toggleDetails(key, event) {
+					toggleDetails: function(key, event) {
 						let current = this.showDetails[key];
 						if (current === null || current === undefined) {
 							current = false;
 						}
-						Vue.set(this.showDetails, `${key}`, !current);
+						Vue.set(this.showDetails, key.toString(10), !current);
 						if (event) {
 							event.preventDefault();
 							event.target.classList.toggle("active");
 						} 
 					},
-					toggleSteps(key, event) {
+					toggleSteps: function(key, event) {
 						let current = this.showSteps[key];
 						if (current === null || current === undefined) {
 							current = false;
 						}
-						Vue.set(this.showSteps, `${key}`, !current);
+						Vue.set(this.showSteps, key.toString(10), !current);
 						if (event) {
 							event.preventDefault();
 							event.target.classList.toggle("active");
