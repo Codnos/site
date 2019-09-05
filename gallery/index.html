@@ -10,148 +10,11 @@
 	<script type="text/javascript" src="js/vue-gallery.min.js"></script>
 	<script type="text/javascript" src="js/blueimp-gallery-audio.js"></script>
 	<script type="text/javascript" src="files.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/blueimp-gallery.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/theme-pink.css"/>
+	<link rel="stylesheet" type="text/css" href="css/blueimp-gallery.min.css"/>
 
 	<style id="compiled-css" type="text/css">
-		* {
-			margin: 0;
-			padding: 0;
-		}
-
-		html,
-		body {
-			background-color: #F5F5F5;
-			font-family: Avenir, Helvetica, Arial, sans-serif;
-			-webkit-font-smoothing: antialiased;
-		}
-
-		.top-bar {
-			background-color: black;
-			color: white;
-			width: 100%;
-			padding: 20px;
-		}
-
-		.top-bar>h1 {
-			text-align: center;
-			vertical-align: middle;
-		}
-
-		.footer {
-			background-color: #111;
-			color: white;
-			width: 100%;
-			padding: 20px;
-		}
-
-		.footer a,a:hover,a:visited {
-			text-decoration: underline;
-			color: #999;
-		}
-
-		.container {
-			margin: 10px auto;
-			max-width: 750px;
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-		}
-
-		.page {
-			margin-bottom: 20px;
-			padding: 50px;
-			background-color: #fff;
-			-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-			-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-			box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-		}
-
-		.page h2 {
-			padding: 5px 0;
-		}
-
-		.section-description h3 {
-			padding: 5px 0;
-		}
-
-		.section-container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.section {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-
-		@media (max-width: 678px) {
-			.section-container {
-				flex-direction: column;
-			}
-
-			.section {
-				flex-direction: column;
-			}
-		}
-
-		.image {
-			background-size: cover;
-			background-repeat: no-repeat;
-			border: 1px solid #ebebeb;
-			margin: 0px 5px 5px 0px;
-			width: 300px;
-			height: 200px;
-		}
-
-		.observation-text {
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-
-		.accordion {
-			background-color: #eee;
-			color: #444;
-			cursor: pointer;
-			padding: 12px;
-			width: 100%;
-			text-align: left;
-			border: none;
-			outline: none;
-			font-size: 0.75em;
-			transition: 0.4s;
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-
-		.accordion:hover {
-			background-color: #ccc;
-		}
-
-		.accordion:after {
-			content: '\002B';
-			color: #777;
-			font-weight: bold;
-			float: right;
-			margin-left: 5px;
-		}
-
-		.accordion.active:after {
-			content: "\2212";
-		}
-
-		.eyfs {
-			padding: 5px;
-			font-size: 0.75em;
-		}
-
-		hr {
-			border: 0;
-			height: 0;
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
-			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-		}
-
 		.blueimp-gallery>.indicator>li {
 			display: none;
 		}
@@ -171,6 +34,7 @@
 				el: '#app',
 				data: function () {
 					return {
+						title: "",
 						filesData: [],
 						index: null,
 						showDetails: {},
@@ -189,6 +53,7 @@
 				},
 
 				mounted: function () {
+					this.title = title;
 					var filesData = files;
 
 					var counter = 0;
@@ -253,7 +118,7 @@
 		<gallery :images="imagesInFiles" :index="index" @close="index = null" :options="{'stretchImages': true}">
 		</gallery>
 		<div class="top-bar">
-			<h1>Photo Gallery</h1>
+			<h1>{{title}}</h1>
 		</div>
 		<div class="container">
 			<div v-for="(section, sectionIndex) in filesData" :key="sectionIndex" class="page">
@@ -269,10 +134,10 @@
 							</p>
 							<button @click="toggleDetails(sectionIndex, $event)"
 								class="accordion">{{showDetails[sectionIndex] ? 'Hide details...' : 'Details...'}}</button>
-							<div class="eyfs" v-if="section.description['Observation'].eyfs"
+							<div class="details" v-if="section.description['Observation'].details"
 								v-show="showDetails[sectionIndex] === true"
-								v-for="eyfs in section.description['Observation'].eyfs">
-								<div v-for="(value, key) in eyfs">
+								v-for="details in section.description['Observation'].details">
+								<div v-for="(value, key) in details">
 									<h4>{{key}}</h4>
 									<p>{{value}}</p>
 								</div>
@@ -285,10 +150,10 @@
 								{{section.description['Next steps'] ? section.description['Next steps'].text : ''}}</p>
 							<button @click="toggleSteps(sectionIndex, $event)"
 								class="accordion">{{showSteps[sectionIndex] ? 'Hide details...' : 'Details...'}}</button>
-							<div class="eyfs" v-if="section.description['Next steps'].eyfs"
+							<div class="details" v-if="section.description['Next steps'].details"
 								v-show="showSteps[sectionIndex] === true"
-								v-for="eyfs in section.description['Next steps'].eyfs">
-								<div v-for="(value, key) in eyfs">
+								v-for="details in section.description['Next steps'].details">
+								<div v-for="(value, key) in details">
 									<h4>{{key}}</h4>
 									<p>{{value}}</p>
 								</div>
@@ -304,7 +169,7 @@
 			</div>
 		</div>
 		<div class="footer">
-			<p>Gallery generated by <a href="http://codnos.com">Codnos</a>. Items in gallery provided by their respective owner.</p>
+				<p>Gallery generated by <a href="http://codnos.com">Codnos Ltd</a>. Items in gallery provided by their respective owner.</p>
 		</div>
 	</div>
 </body>
