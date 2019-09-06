@@ -24,6 +24,8 @@ body {
 
 .page {
     margin-bottom: 20px;
+    flex: 0 0;
+    box-sizing: border-box;
 }
 
 .page h2 {
@@ -67,12 +69,6 @@ body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 678px) {
-    .section {
-        flex-direction: column;
-    }
-}
-
 .image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,6 +76,17 @@ body {
     margin: 0px 5px 5px 0px;
     width: 18.75rem;
     height: 12.5rem;
+}
+
+@media (max-width: 678px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 9rem;
+        height: 6rem;
+    }
 }
 
 .observation-text {
