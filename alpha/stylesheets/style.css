@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    font-family: Graphik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    background-color:  #24292e;
+    color: #fff;
+    font-weight: 500;
+}
+
+.page-header > div > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.page-header > div > nav > ul > li {
+    padding: 15px 20px;
+}
+
+.page-header > div > nav > ul > li > a {
+    text-decoration: none;
+    color: unset;
+}
+
+.page-header > div > img {
+    width: 100%;
+    height: 350px;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+.main-content > div {
+    max-width: 700px;
+    margin: 2em auto;
+}
+
+.main-content > div > p {
+    padding: 10px 0;
+}
+
+.site-footer {
+    background-color: #292929;
+    color: rgba(255,255,255,.99);
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	justify-content: center;
+	margin-left: -50px;
+}
+
+.site-footer > div {
+    padding: 1em;
+}
+
+.img-home {
+    background-image: url('https://image.shutterstock.com/image-vector/neural-network-concept-connected-cells-260nw-666790696.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    z-index: 1;
+    height: 300px;
+}
+
+.jumbotron > div {
+    text-align: center;
+    padding: 120px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.jumbotron > div > a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+} 
+
+.jumbotron > div > a:hover {
+    background-color: #fff;
+    color: #292929;
+}
