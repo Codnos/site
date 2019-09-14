@@ -22,7 +22,7 @@ body {
     font-weight: 500;
 }
 
-.page-header > div > nav > ul {
+nav.topnav > ul {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -30,14 +30,46 @@ body {
     justify-content: center;
 }
 
-.page-header > div > nav > ul > li {
+nav.topnav > ul > li > a {
+    display: block;
     padding: 15px 20px;
-}
-
-.page-header > div > nav > ul > li > a {
     text-decoration: none;
     color: unset;
 }
+
+nav.topnav > ul > li > a:hover {
+    background-color: #15344a; /*#3f7fa8;*/
+}
+
+nav.topnav a.active {
+    background-color:  #15344a;
+}
+
+nav.topnav .icon {
+    display: none;
+  }
+
+@media screen and (max-width: 600px) {
+    nav.topnav > ul > li:not(:last-child) {display: none;}
+    nav.topnav a.icon {
+      display: block;
+    }
+    nav.topnav > ul {        
+        justify-content: flex-end;
+    }
+
+    nav.topnav.responsive {position: relative;}
+    nav.topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    nav.topnav.responsive > ul {
+        flex-direction: column;
+    }
+    nav.topnav.responsive > ul > li {display: block;}
+  }
+
 
 .page-header > div > img {
     width: 100%;
@@ -51,6 +83,7 @@ body {
 .main-content > div {
     max-width: 700px;
     margin: 2em auto;
+    padding: 2em;
 }
 
 .main-content > div > p {
@@ -64,16 +97,20 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-	justify-content: center;
+    justify-content: center;
+    align-content: center;
 	margin-left: -50px;
 }
 
 .site-footer > div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
     padding: 1em;
 }
 
-.img-home {
-    background-image: url('https://image.shutterstock.com/image-vector/neural-network-concept-connected-cells-260nw-666790696.jpg');
+.top-img {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -84,9 +121,23 @@ body {
     height: 300px;
 }
 
+.img-home {
+    background-image: url('https://image.shutterstock.com/z/stock-photo-conceptual-illustration-of-neuron-cells-with-glowing-link-knots-in-abstract-dark-space-high-576832348.jpg');
+    /* background-image: url('https://image.shutterstock.com/image-vector/neural-network-concept-connected-cells-260nw-666790696.jpg'); */
+}
+
+.img-about {
+    background-image: url('https://image.shutterstock.com/z/stock-photo-global-network-blockchain-polygon-mesh-d-illustration-neural-networks-and-artificial-1063275593.jpg');
+}
+
+.img-services {
+    background-image: url('https://image.shutterstock.com/z/stock-photo-businessman-hand-working-on-laptop-computer-with-digital-layer-business-strategy-and-social-media-326196896.jpg');
+    /* background-image: url('https://image.shutterstock.com/z/stock-photo-big-data-illustration-1150834235.jpg'); */
+}
+
 .jumbotron > div {
     text-align: center;
-    padding: 120px;
+    padding: 100px;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -112,3 +163,33 @@ body {
     background-color: #fff;
     color: #292929;
 }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #15344a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #15344a;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }

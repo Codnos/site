@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Codnos Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css" />
+  <script type="text/javascript" src="js/custom.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <section class="page-header">
+    <div>
+      <nav class="topnav" id="topnav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li>
+            <a href="javascript:void(0);" class="icon" onclick="toggle()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <p>Please send us a message if your interested in our service</p>
+      <form method="GET" action="mailto:info@codnos.com" enctype="text/plain">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" />
+
+        <label for="body">Message</label>
+        <textarea id="body" name="body" placeholder="Please write your message here..." style="height:200px"></textarea>
+
+        <br />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div style="width: 50px;"><img src="img/logo.png" width="50px"/></div>
+    <div>Codnos Ltd is registered in United Kingdom. Number: 10080999</div>
+  </footer>
+</body>
+
+</html>
