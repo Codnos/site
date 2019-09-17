@@ -37,7 +37,7 @@ nav.topnav > ul > li > a {
     color: unset;
 }
 
-nav.topnav > ul > li > a:hover {
+nav.topnav > ul > li:not(:last-child) > a:hover {
     background-color: #15344a; /*#3f7fa8;*/
 }
 
@@ -82,7 +82,7 @@ nav.topnav .icon {
 
 .main-content > div {
     max-width: 700px;
-    margin: 2em auto;
+    margin: 0 auto;
     padding: 2em;
 }
 
@@ -119,30 +119,33 @@ nav.topnav .icon {
     width: auto;
     z-index: 1;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .img-home {
-    background-image: url('https://image.shutterstock.com/z/stock-photo-conceptual-illustration-of-neuron-cells-with-glowing-link-knots-in-abstract-dark-space-high-576832348.jpg');
-    /* background-image: url('https://image.shutterstock.com/image-vector/neural-network-concept-connected-cells-260nw-666790696.jpg'); */
+    background-image: url('../img/home.jpg');
 }
 
 .img-about {
-    background-image: url('https://image.shutterstock.com/z/stock-photo-global-network-blockchain-polygon-mesh-d-illustration-neural-networks-and-artificial-1063275593.jpg');
+    background-image: url('../img/about.jpg');
 }
 
 .img-services {
-    background-image: url('https://image.shutterstock.com/z/stock-photo-businessman-hand-working-on-laptop-computer-with-digital-layer-business-strategy-and-social-media-326196896.jpg');
-    /* background-image: url('https://image.shutterstock.com/z/stock-photo-big-data-illustration-1150834235.jpg'); */
+    background-image: url('../img/services.jpg');
 }
 
-.jumbotron > div {
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    padding: 100px;
-    max-width: 500px;
-    margin: 0 auto;
 }
 
-.jumbotron > div > a {
+a.btn-link {
     text-decoration: none;
     color: unset;
     display: inline-block;
@@ -159,7 +162,7 @@ nav.topnav .icon {
     color: #fff;
 } 
 
-.jumbotron > div > a:hover {
+a.btn-link:hover {
     background-color: #fff;
     color: #292929;
 }
@@ -192,4 +195,19 @@ input[type=text], select, textarea {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+  }
+
+  ul.list-with-icon {
+    margin: 2em 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul.list-with-icon > li {
+    display: block;
+  }
+
+  ul.list-with-icon > li > i {
+    display: block;
   }
