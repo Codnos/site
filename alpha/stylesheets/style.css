@@ -94,20 +94,25 @@ nav.topnav .icon {
     background-color: #292929;
     color: rgba(255,255,255,.99);
     flex-shrink: 0;
-    display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-	margin-left: -50px;
 }
 
-.site-footer > div {
+.site-footer > div > div {
+    padding: 1em;
+}
+
+.centered {
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+.centered-row {
+    flex-direction: row;
+}
+
+.centered-column {
     flex-direction: column;
-    padding: 1em;
 }
 
 .top-img {
