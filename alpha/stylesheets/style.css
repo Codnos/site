@@ -215,4 +215,15 @@ input[type=text], select, textarea {
 
   ul.list-with-icon > li > i {
     display: block;
+    text-align: center;
+  }
+
+  ul.list-with-icon > li > h3 {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul.list-with-icon {
+        flex-direction: column;
+    }
   }
