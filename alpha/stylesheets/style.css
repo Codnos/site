@@ -223,6 +223,7 @@ input[type=text], select, textarea {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   ul.list-with-icon > li {
