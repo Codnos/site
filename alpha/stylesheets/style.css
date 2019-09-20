@@ -98,11 +98,23 @@ nav.topnav .icon {
 }
 
 .site-footer-pad-big {
-    padding: 1.25em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
 }
 
 .site-footer-pad-small {
     padding: 0.1em;
+}
+
+.site-footer-logo > img {
+    width: 50px;
+    align-self: center;
+}
+
+.site-footer-social {
+    text-align: center;
 }
 
 .site-footer-social > a {
@@ -118,10 +130,8 @@ nav.topnav .icon {
     align-content: center;
 }
 
-.adjusted-to-right {
-    display: flex;
-    justify-content: end;
-    align-content: center;
+.centered-dynamic {
+    flex-direction: row;
 }
 
 .centered-row {
@@ -251,5 +261,14 @@ input[type=text], select, textarea {
   @media screen and (max-width: 600px) {
     ul.list-with-icon {
         flex-direction: column;
+    }
+
+    .centered-dynamic {
+        flex-direction: column;
+    }
+
+    .site-footer-pad-big {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
   }
