@@ -245,7 +245,7 @@ input[type=text], select, textarea {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     padding: 1em;
-    width: 17em;
+    width: 17.5em;
   }
 
   ul.list-with-icon > li > i {
@@ -258,9 +258,18 @@ input[type=text], select, textarea {
     text-align: center;
   }
 
+  ul.list-with-icon > li > p {
+    padding: 1em;
+    text-align: justify;
+  }
+
   @media screen and (max-width: 600px) {
     ul.list-with-icon {
         flex-direction: column;
+    }
+
+    ul.list-with-icon > li {
+        width: 90%;
     }
 
     .centered-dynamic {
