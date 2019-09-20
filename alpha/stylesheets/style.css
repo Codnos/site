@@ -97,13 +97,28 @@ nav.topnav .icon {
     flex-wrap: wrap;
 }
 
-.site-footer > div > div {
-    padding: 1em;
+.site-footer-pad-big {
+    padding: 1.25em;
+}
+
+.site-footer-pad-small {
+    padding: 0.1em;
+}
+
+.site-footer-social > a {
+    text-decoration: none;
+    color: gray;
 }
 
 .centered {
     display: flex;
     justify-content: center;
+    align-content: center;
+}
+
+.adjusted-to-right {
+    display: flex;
+    justify-content: end;
     align-content: center;
 }
 
@@ -211,6 +226,7 @@ input[type=text], select, textarea {
   }
 
   ul.list-with-icon > li {
+    margin: 1em;
     display: block;
   }
 
