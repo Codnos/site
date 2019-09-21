@@ -72,7 +72,6 @@ nav.topnav .icon {
 
 
 .page-header > div > img {
-    width: 100%;
     height: 350px;
 }
 
@@ -263,7 +262,7 @@ input[type=text], select, textarea {
     text-align: justify;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 810px) {
     ul.list-with-icon {
         flex-direction: column;
     }
