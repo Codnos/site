@@ -213,36 +213,36 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #15344a;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #15344a;
-  }
-  
-  .container {
+}
+
+input[type=submit]:hover {
+    background-color: #214e6e;
+}
+
+.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
+}
 
-  ul.list-with-icon {
+ul.list-with-icon {
     margin: 2em 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+}
 
-  ul.list-with-icon > li {
+ul.list-with-icon > li {
     margin: 0.5em;
     display: block;
     background-clip: border-box;
@@ -250,24 +250,24 @@ input[type=text], select, textarea {
     border-radius: .25rem;
     padding: 1.5em;
     width: 18.5em;
-  }
+}
 
-  ul.list-with-icon > li > i {
+ul.list-with-icon > li > i {
     display: block;
     text-align: center;
     margin-bottom: 0.2em;
-  }
+}
 
-  ul.list-with-icon > li > h3 {
+ul.list-with-icon > li > h3 {
     text-align: center;
-  }
+}
 
-  ul.list-with-icon > li > p {
+ul.list-with-icon > li > p {
     padding: 1em;
     text-align: justify;
-  }
+}
 
-  @media screen and (max-width: 810px) {
+@media screen and (max-width: 810px) {
     ul.list-with-icon {
         flex-direction: column;
     }
@@ -284,4 +284,47 @@ input[type=text], select, textarea {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-  }
+}
+
+ul.news {
+    margin: 2em 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul.news > li > h2 {
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+ul.news > li > p {
+    padding-top: 0.5em;
+    text-align: justify;
+}
+
+.news-date {
+    font-style: italic;
+}
+
+a.btn-link-blue {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    background-color: #15344a;
+    color: white;
+}
+
+a.btn-link-blue:hover {
+    background-color: #214e6e;
+}
