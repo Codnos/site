@@ -87,11 +87,11 @@ nav.topnav .icon {
 .main-content > div {
     max-width: 700px;
     margin: 0 auto;
-    padding: 2em;
+    padding: 0.5em 2em;
 }
 
 .main-content > div > p {
-    padding: 10px 0;
+    padding: 0.8em 0;
 }
 
 .site-footer {
@@ -294,8 +294,12 @@ ul.news {
     flex-wrap: wrap;
 }
 
+ul.news > li {
+    padding: 0.5em 0;
+}
+
 ul.news > li > h2 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.25em;
 }
 
