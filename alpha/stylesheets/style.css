@@ -108,6 +108,10 @@ nav.topnav .icon {
     padding: 0.1em;
 }
 
+.site-footer-logo {
+    width: 50px;
+}
+
 .site-footer-logo > img {
     width: 50px;
     align-self: center;
