@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html,
@@ -244,7 +245,7 @@ input[type=text], select, textarea {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     padding: 1.5em;
-    width: 17.5em;
+    width: 18.5em;
   }
 
   ul.list-with-icon > li > i {
@@ -268,7 +269,7 @@ input[type=text], select, textarea {
     }
 
     ul.list-with-icon > li {
-        width: 85%;
+        width: 95%;
     }
 
     .centered-dynamic {
