@@ -173,6 +173,10 @@ nav.topnav .icon {
     background-image: url('../img/services.jpg');
 }
 
+.img-contact {
+    background-image: url('../img/contact.jpg');
+}
+
 .jumbotron {
     display: flex;
     justify-content: center;
@@ -204,34 +208,22 @@ a.btn-link:hover {
     color: #292929;
 }
 
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+ul.small-list-with-icon {
+    list-style-type: none;
 }
 
-input[type=submit] {
-    background-color: #15344a;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+ul.small-list-with-icon > li > p > i {
+    display: inline-block;
+    margin: 0.2em;
 }
 
-input[type=submit]:hover {
-    background-color: #214e6e;
+ul.small-list-with-icon > li > p > a {
+    text-decoration: none;
+    color: unset;
 }
 
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+ul.small-list-with-icon > li > p > a:hover {
+    text-decoration: underline;
 }
 
 ul.list-with-icon {
