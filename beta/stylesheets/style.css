@@ -16,61 +16,16 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-color: #15344a;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .jumbotron {
-    background: #00000047;
+    background-color: unset;
 }
 
-.jumbotron-full {
-    height: 5em;
-}
-
-.jumbotron-smaller {
-    height: 2em;
-}
-
-@media (min-width: 576px) {
-    .jumbotron-full {
-        height: 10em;
-    }
-
-    .jumbotron-smaller {
-        height: 4em;
-    }
-}
-
-@media (min-width: 768px) {
-    .jumbotron-full {
-        height: 20em;
-    }
-
-    .jumbotron-smaller {
-        height: 8em;
-    }
-}
-
-@media (min-width: 992px) {
-    .jumbotron-full {
-        height: 40em;
-    }
-
-    .jumbotron-smaller {
-        height: 16em;
-    }
-}
-
-@media (min-width: 1200px) {
-    .jumbotron-full {
-        height: 80em;
-    }
-
-    .jumbotron-smaller {
-        height: 32em;
-    }
+.page-header-full {
+    height: 100vh;
 }
 
 .navbar-trans {
@@ -82,19 +37,19 @@ body {
 }
 
 .img-home {
-    background-image: url('../img/home.jpg');
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/home.jpg');
 }
 
 .img-about {
-    background-image: url('../img/about.jpg');
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ),url('../img/about.jpg');
 }
 
 .img-services {
-    background-image: url('../img/services.jpg');
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/services.jpg');
 }
 
 .img-contact {
-    background-image: url('../img/contact.jpg');
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/contact.jpg');
 }
 
 .site-footer {
