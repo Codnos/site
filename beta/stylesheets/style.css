@@ -102,16 +102,12 @@ ul.small-list-with-icon {
     list-style-type: none;
 }
 
-ul.small-list-with-icon > li > p > i {
+ul.small-list-with-icon > li > i {
     display: inline-block;
     margin: 0.2em;
 }
 
-ul.small-list-with-icon > li > p > a {
+ul.small-list-with-icon > li > a {
     text-decoration: none;
     color: unset;
-}
-
-ul.small-list-with-icon > li > p > a:hover {
-    text-decoration: underline;
 }
