@@ -27,7 +27,7 @@ body {
 
 @media (min-width: 576px) {
     .jumbotron-full {
-        height: 26em;
+        height: 32em;
     }
 
     .jumbotron-smaller {
@@ -37,11 +37,11 @@ body {
 
 @media (min-width: 768px) {
     .jumbotron-full {
-        height: 36em;
+        height: 48em;
     }
 
     .jumbotron-smaller {
-        height: 20em;
+        height: 36em;
     }
 }
 
