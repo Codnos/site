@@ -29,6 +29,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.jumbotron-smaller {
+    height: 20em;
+}
+
 .navbar-trans {
     background: #000000A7;
 }
