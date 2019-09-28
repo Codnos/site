@@ -26,6 +26,7 @@ body {
 
 .page-header-full {
     height: 100vh;
+    margin-bottom: 2rem;
 }
 
 .navbar-trans {
