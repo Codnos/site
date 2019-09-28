@@ -25,12 +25,44 @@ body {
     background: #00000047;
 }
 
-.jumbotron-full {
-    height: 36em;
+@media (min-width: 576px) {
+    .jumbotron-full {
+        height: 20em;
+    }
+
+    .jumbotron-smaller {
+        height: 12em;
+    }
 }
 
-.jumbotron-smaller {
-    height: 20em;
+@media (min-width: 768px) {
+    .jumbotron-full {
+        height: 36em;
+    }
+
+    .jumbotron-smaller {
+        height: 20em;
+    }
+}
+
+@media (min-width: 992px) {
+    .jumbotron-full {
+        height: 36em;
+    }
+
+    .jumbotron-smaller {
+        height: 20em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumbotron-full {
+        height: 48em;
+    }
+
+    .jumbotron-smaller {
+        height: 36em;
+    }
 }
 
 .navbar-trans {
