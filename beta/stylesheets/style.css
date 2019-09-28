@@ -27,11 +27,11 @@ body {
 
 @media (min-width: 576px) {
     .jumbotron-full {
-        height: 20em;
+        height: 26em;
     }
 
     .jumbotron-smaller {
-        height: 12em;
+        height: 20em;
     }
 }
 
