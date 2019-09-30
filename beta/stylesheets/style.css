@@ -63,8 +63,13 @@ body {
     background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/contact.jpg');
 }
 
+.footer-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .site-footer {
-    background-color: #292929;
+    background-color: #000;
     color: rgba(255, 255, 255, 0.8);
 }
 
