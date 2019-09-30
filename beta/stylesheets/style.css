@@ -122,6 +122,10 @@ ul.news > li {
     display: inline-block;
 }
 
+ul.news > li > h5 > a {
+    color: unset;
+}
+
 .news-date {
     font-style: italic;
 }

@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -35,6 +38,7 @@
                         <li class="nav-item active"><a class="nav-link text-white px-4" href=".">home</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="services/">services</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="how_we_work/">how we work</a></li>
+                        <li class="nav-item"><a class="nav-link text-white px-4" href="blog/">blog</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="about/">about</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="contact/">contact</a></li>
                     </ul>
@@ -70,37 +74,13 @@
             <div class="col-md-12 col-lg-6">
                 <h2>news</h2>
                 <ul class="news">
-                    <li class="mt-3">
-                        <h5>Codnos Ltd has become Crown Commercial Service Supplier</h5>
-                        <p class="news-date">2019-10-01</p>
-                        <p>
-                            We're pleased to announce that starting on 1 October 2019 Codnos Ltd is now
-                            Crown Commercial Service Supplier. We are now allowed to provide our services on
-                            <a href="https://www.digitalmarketplace.service.gov.uk/" target="_blank">Digital
-                                Marketplace</a>.
-                        </p>
+                    {% for post in site.posts limit:5 %}
+                    <li>
+                        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                        <p class="news-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+                        <p>{{ post.excerpt }}</p>
                     </li>
-                    <li class="mt-3">
-                        <h5>Twitter</h5>
-                        <p class="news-date">2019-09-22</p>
-                        <p>
-                            Hello World! We are now available on
-                            <a href="https://twitter.com/codnos_ltd" target="_blank">Twitter</a>. Please follow us to
-                            receive
-                            latest updates related to our company. Also do not hesitate to send us a message with any
-                            questions
-                            you may have about our services.
-                        </p>
-                    </li>
-                    <li class="mt-3">
-                        <h5>Codnos has got a brand new website</h5>
-                        <p class="news-date">2019-09-21</p>
-                        <p>
-                            After a long wait the new website is finally here. You should now be able to check the
-                            <a href="services/">services that we provide</a>, learn more <a href="about/">about us</a>
-                            and <a href="contact/">get in touch</a>.
-                        </p>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-md-0 col-lg-3"></div>
@@ -156,9 +136,9 @@
             <div class="col-12 col-md-12 col-lg-3">
                 <p>LATEST NEWS</p>
                 <ul class="footer-section-links">
-                    <li><a class="py-2" href=".">Crown Commercial Services Supplier</a></li>
-                    <li><a class="py-2" href=".">Twitter</a></li>
-                    <li><a class="py-2" href=".">Codnos - new website</a></li>
+                    {% for post in site.posts limit:5 %}
+                    <li><a class="py-2" href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-12 col-md-12 col-lg-3">
@@ -167,6 +147,7 @@
                     <li><a class="py-2" href="services/"><span>Services</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="how_we_work/#practices"><span>Practices We Follow</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="how_we_work/#technology"><span>Technology We Use</span><i class="fas fa-angle-right text-right"></i></a></li>
+                    <li><a class="py-2" href="blog/"><span>Blog</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="about/"><span>About us</span><i class="fas fa-angle-right text-right"></i></a></li>
                 </ul>
             </div>

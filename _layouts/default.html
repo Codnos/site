@@ -1,12 +1,9 @@
----
-layout: none
----
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
-    <title>Codnos Ltd - Contact</title>
+    <title>Codnos Ltd - {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../stylesheets/fontawesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="../stylesheets/solid.min.css"/>
@@ -19,9 +16,9 @@ layout: none
 </head>
 
 <body>
-<section class="page-header img-contact">
+<section class="page-header">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-trans" id="topnav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topnav">
             <div class="container">
                 <a class="navbar-brand" href="../">
                     <img src="../img/logo.png" width="32" height="32" alt="">
@@ -36,64 +33,20 @@ layout: none
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../">home</a></li>
-                        <li class="nav-item active"><a class="nav-link text-white px-4" href="../services/">services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white px-4" href="../services/">services</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../how_we_work/">how we work</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../blog/">blog</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../about/">about</a></li>
+                        <li class="nav-item active"><a class="nav-link text-white px-4" href="../about/">about</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../contact/">contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="jumbotron jumbotron-smaller">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6 text-center"></div>
-                <div class="col-sm-3"></div>
-            </div>
-        </div>
-    </div>
 </section>
 
 <section class="main-content mb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <h2>online</h2>
-                <ul class="small-list-with-icon">
-                    <li>
-                        <i class="fas fa-at" style="color: #ce4136"></i>
-                        <a href="mailto:info@codnos.com">info@codnos.com</a>
-
-                    </li>
-                    <li>
-                        <i class="fab fa-twitter" style="color: #1da1f3"></i>
-                        <a href="https://twitter.com/codnos_ltd" target="_blank">@codnos_ltd</a>
-
-                    </li>
-                    <li>
-                        <i class="fas fa-phone" style="color: #a4dc55"></i>
-                        +<span></span>4<span></span>4<span></span>&nbsp;7<span></span>7<span></span>1<span></span>1<span></span>&nbsp;0<span></span>2<span></span>1<span></span>7<span></span>3<span></span>1<span></span>
-
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <h2>registered office</h2>
-                <p>
-                    5 Carrwood Park<br/>
-                    Selby Road<br/>
-                    Leeds<br/>
-                    LS15 4LG<br/>
-                    United Kingdom
-                </p>
-            </div>
-            <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
-        </div>
-    </div>
+    {{ content }}
 </section>
 
 <div class="footer-section">
@@ -171,5 +124,4 @@ layout: none
     </div>
 </footer>
 </body>
-
 </html>

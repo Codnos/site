@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -35,6 +38,7 @@
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../">home</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../services/">services</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../how_we_work/">how we work</a></li>
+                        <li class="nav-item"><a class="nav-link text-white px-4" href="../blog/">blog</a></li>
                         <li class="nav-item active"><a class="nav-link text-white px-4" href="../about/">about</a></li>
                         <li class="nav-item"><a class="nav-link text-white px-4" href="../contact/">contact</a></li>
                     </ul>
@@ -196,9 +200,9 @@
             <div class="col-12 col-md-12 col-lg-3">
                 <p>LATEST NEWS</p>
                 <ul class="footer-section-links">
-                    <li><a class="py-2" href=".">Crown Commercial Services Supplier</a></li>
-                    <li><a class="py-2" href=".">Twitter</a></li>
-                    <li><a class="py-2" href=".">Codnos - new website</a></li>
+                    {% for post in site.posts limit:5 %}
+                    <li><a class="py-2" href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-12 col-md-12 col-lg-3">
@@ -207,6 +211,7 @@
                     <li><a class="py-2" href="../services/"><span>Services</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="../how_we_work/#practices"><span>Practices We Follow</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="../how_we_work/#technology"><span>Technology We Use</span><i class="fas fa-angle-right text-right"></i></a></li>
+                    <li><a class="py-2" href="../blog/"><span>Blog</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="../about/"><span>About us</span><i class="fas fa-angle-right text-right"></i></a></li>
                 </ul>
             </div>
