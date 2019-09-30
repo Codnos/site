@@ -84,6 +84,10 @@ body {
     border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
 
+.footer-section-contact {
+    list-style-type: none;
+}
+
 .site-footer {
     background-color: #000;
     color: rgba(255, 255, 255, 0.8);
