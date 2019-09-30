@@ -59,6 +59,10 @@ body {
     background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/services.jpg');
 }
 
+.img-how-we-work {
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/how_we_work.jpg');
+}
+
 .img-contact {
     background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/contact.jpg');
 }
