@@ -64,10 +64,11 @@ layout: none
             <div class="col-md-12 col-lg-6">
                 <ul class="news">
                     {% for post in site.posts %}
-                    <li>
+                    <li class="mb-4">
                         <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
-                        <p class="news-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-                        <p>{{ post.excerpt }}</p>
+                        <span class="news-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        {{ post.excerpt }}
+                        <a href="{{ post.url }}">Read more</a>
                     </li>
                     {% endfor %}
                 </ul>

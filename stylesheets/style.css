@@ -124,10 +124,15 @@ ul.news {
 
 ul.news > li {
     display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
 ul.news > li > h6 > a {
     text-decoration: none;
+}
+
+ul.news > li > p {
+    margin-bottom: 0;
 }
 
 .news-date {

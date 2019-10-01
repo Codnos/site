@@ -77,10 +77,11 @@ layout: none
                 <h2>latest posts</h2>
                 <ul class="news">
                     {% for post in site.posts limit:5 %}
-                    <li>
+                    <li class="mb-4">
                         <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
-                        <p class="news-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-                        <p>{{ post.excerpt }}</p>
+                        <span class="news-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        {{ post.excerpt }}
+                        <a href="{{ post.url }}">Read more</a>
                     </li>
                     {% endfor %}
                 </ul>
