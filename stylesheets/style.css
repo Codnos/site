@@ -126,8 +126,8 @@ ul.news > li {
     display: inline-block;
 }
 
-ul.news > li > h5 > a {
-    color: unset;
+ul.news > li > h6 > a {
+    text-decoration: none;
 }
 
 .news-date {

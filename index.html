@@ -76,7 +76,7 @@ layout: none
                 <ul class="news">
                     {% for post in site.posts limit:5 %}
                     <li>
-                        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                        <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
                         <p class="news-date">{{ post.date | date: "%Y-%m-%d" }}</p>
                         <p>{{ post.excerpt }}</p>
                     </li>
