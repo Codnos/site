@@ -166,3 +166,11 @@ ul.small-list-with-icon > li > a {
     background-position: center;
     */
 }
+
+span.anchor {
+    margin-top: -5em;
+    display: block;
+    height: 5em;
+    visibility: hidden;
+    position: relative;
+}
