@@ -151,16 +151,18 @@ ul.small-list-with-icon > li > a {
 
 .ccs-logo-container {
     width: 7em;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .ccs-logo {
     height: 5em;
     width: 5em;
     margin: 1em;
+    /*
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../img/CCS-supplier-logo-blue.png');
     background-position: center;
+    */
 }
