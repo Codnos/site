@@ -172,10 +172,25 @@ ul.small-list-with-icon > li > a {
     */
 }
 
+.logo {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+}
+
+.logo > img {
+    height: 2em;
+    width: 2em;
+}
+
 span.anchor {
     margin-top: -5em;
     display: block;
     height: 5em;
     visibility: hidden;
     position: relative;
+}
+
+ul.regular > li {
+    list-style: inside
 }
