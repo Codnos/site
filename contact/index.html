@@ -1,175 +1,50 @@
 ---
-layout: none
----
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Codnos Ltd - Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/fontawesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/solid.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/brands.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"/>
-    <script type="text/javascript" src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-</head>
-
-<body>
-<section class="page-header img-contact">
-    <div>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-trans" id="topnav">
-            <div class="container">
-                <a class="navbar-brand" href="../">
-                    <div class="logo"><img src="../img/logo.png" alt="Company logo"></div>
-                    <span class="mb-0 ml-1 navbar-text text-white">codnos</span>
-                </a>
-                <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../">home</a></li>
-                        <li class="nav-item active"><a class="nav-link text-white px-4" href="../services/">services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../how_we_work/">how we work</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../blog/">blog</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../about/">about</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../contact/">contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+layout: default
+additional_header_classes: img-contact
+hero_header: |
     <div class="jumbotron jumbotron-smaller">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6 text-center"></div>
-                <div class="col-sm-3"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="main-content mb-4">
     <div class="container">
-        <div class="row">
-            <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <h2>online</h2>
-                <ul class="small-list-with-icon">
-                    <li>
-                        <i class="fas fa-at" style="color: #ce4136"></i>
-                        <a href="mailto:info@codnos.com">info@codnos.com</a>
-
-                    </li>
-                    <li>
-                        <i class="fab fa-twitter" style="color: #1da1f3"></i>
-                        <a href="https://twitter.com/codnos_ltd" target="_blank">@codnos_ltd</a>
-
-                    </li>
-                    <li>
-                        <i class="fas fa-phone" style="color: #a4dc55"></i>
-                        +<span></span>4<span></span>4<span></span>&nbsp;7<span></span>7<span></span>1<span></span>1<span></span>&nbsp;0<span></span>2<span></span>1<span></span>7<span></span>3<span></span>1<span></span>
-
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <h2>registered office</h2>
-                <p>
-                    5 Carrwood Park<br/>
-                    Selby Road<br/>
-                    Leeds<br/>
-                    LS15 4LG<br/>
-                    United Kingdom
-                </p>
-            </div>
-            <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
-        </div>
+    <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 text-center"></div>
+    <div class="col-sm-3"></div>
     </div>
-</section>
+    </div>
+    </div>
+---
+<div class="container">
+    <div class="row">
+        <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <h2>online</h2>
+            <ul class="small-list-with-icon">
+                <li>
+                    <i class="fas fa-at" style="color: #ce4136"></i>
+                    <a href="mailto:info@codnos.com">info@codnos.com</a>
 
-<div class="footer-section">
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-3">
-                <div class="logo"><img src="../img/logo.png" alt="Company logo"></div>
-                <span class="mb-0 ml-1 navbar-text text-white">codnos</span>
-                <p>
-                    At Codnos we use the latest technologies and best practices to help your business
-                    realize its full potential.
-                </p>
-                <div class="ccs-logo-container">
-                    <div class="ccs-logo"></div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>LATEST NEWS</p>
-                <ul class="footer-section-links">
-                    {% for post in site.posts limit:5 %}
-                    <li><a class="py-2" href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>USEFUL LINKS</p>
-                <ul class="footer-section-links">
-                    <li><a class="py-2" href="../services/"><span>Services</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../how_we_work/#practices"><span>Practices We Follow</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../how_we_work/#technology"><span>Technology We Use</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../blog/"><span>Blog</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../about/"><span>About us</span><i class="fas fa-angle-right text-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>CONTACT</p>
-                <p>
-                    5 Carrwood Park<br/>
-                    Selby Road<br/>
-                    Leeds<br/>
-                    LS15 4LG<br/>
-                    United Kingdom
-                </p>
-                <ul class="footer-section-contact">
-                    <li>
-                        Email: <a href="mailto:info@codnos.com">info@codnos.com</a>
-                    </li>
-                    <li>
-                        Phone: +<span></span>4<span></span>4<span></span>&nbsp;7<span></span>7<span></span>1<span></span>1<span></span>&nbsp;0<span></span>2<span></span>1<span></span>7<span></span>3<span></span>1<span></span>
-                    </li>
-                </ul>
-            </div>
+                </li>
+                <li>
+                    <i class="fab fa-twitter" style="color: #1da1f3"></i>
+                    <a href="https://twitter.com/codnos_ltd" target="_blank">@codnos_ltd</a>
+
+                </li>
+                <li>
+                    <i class="fas fa-phone" style="color: #a4dc55"></i>
+                    +<span></span>4<span></span>4<span></span>&nbsp;7<span></span>7<span></span>1<span></span>1<span></span>&nbsp;0<span></span>2<span></span>1<span></span>7<span></span>3<span></span>1<span></span>
+
+                </li>
+            </ul>
         </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <h2>registered office</h2>
+            <p>
+                5 Carrwood Park<br/>
+                Selby Road<br/>
+                Leeds<br/>
+                LS15 4LG<br/>
+                United Kingdom
+            </p>
+        </div>
+        <div class="col-0 col-sm-0 col-md-0 col-lg-3"></div>
     </div>
 </div>
-
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-3 py-1">
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 py-1">
-                <div>
-                    Copyright &copy; Codnos Ltd 2019. All rights reserved.
-                </div>
-                <div>
-                    Codnos Ltd is registered in United Kingdom. Number: 10080999
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-3 py-1 site-footer-social">
-                <a href="http://github.com/Codnos" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/codnos_ltd" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>

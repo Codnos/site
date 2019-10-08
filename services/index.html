@@ -1,262 +1,137 @@
 ---
-layout: none
----
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Codnos Ltd - Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/fontawesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/solid.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/brands.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css"/>
-    <script type="text/javascript" src="../js/jquery-3.2.1.slim.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-</head>
-
-<body>
-<section class="page-header img-services">
-    <div>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-trans" id="topnav">
-            <div class="container">
-                <a class="navbar-brand" href="../">
-                    <div class="logo"><img src="../img/logo.png" alt="Company logo"></div>
-                    <span class="mb-0 ml-1 navbar-text text-white">codnos</span>
-                </a>
-                <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../">home</a></li>
-                        <li class="nav-item active"><a class="nav-link text-white px-4" href="../services/">services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../how_we_work/">how we work</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../blog/">blog</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../about/">about</a></li>
-                        <li class="nav-item"><a class="nav-link text-white px-4" href="../contact/">contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+layout: default
+additional_header_classes: img-services
+hero_header: |
     <div class="jumbotron jumbotron-smaller">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6 text-center"></div>
-                <div class="col-sm-3"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="main-content mb-4">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-12 col-lg-10">
-                <h2>services</h2>
-                <p>
-                    We offer a wide range of services for our customers. We streamline your business
-                    processes and help your business achieve its strategic goals.
-                    Please read below high level description of how we can help you.
-                </p>
-            </div>
-            <div class="col-lg-1"></div>
-        </div>
-        <ul class="list-with-icon">
-            <li>
-                <span class="anchor" id="bespoke-solutions"></span>
-                <div class="container-fluid mt-3">
-                    <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-12 col-md-5 col-lg-4">
-                            <div class="inline-img mb-3"><img src="../img/services/bespoke-solutions.jpg"/></div>
-                        </div>
-                        <div class="col-12 col-md-7 col-lg-6">
-                            <h5>bespoke solution development</h5>
-                            <p>
-                                Whether you have a well thought over project or just an idea that you want to test,
-                                we're here to help. Our team can help you at all stages of software delivery. We follow
-                                the
-                                best practices including SOLID, DDD, TDD, BDD, GoF Patterns, OOP, FP.
-                                The solution is easy to maintain and thoroughly tested. And it does what it says on the
-                                tin.
-                            </p>
-                        </div>
-                        <div class="col-lg-1"></div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <span class="anchor" id="transformation"></span>
-                <div class="container-fluid mt-3">
-                    <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-12 col-md-5 col-lg-4">
-                            <div class="inline-img mb-3"><img src="../img/services/transformation.jpg"/></div>
-                        </div>
-                        <div class="col-12 col-md-7 col-lg-6">
-                            <h5>transforming existing products</h5>
-                            <p>
-                                Sometimes you would love to be able to start over and &quot;do it properly, this time&quot;.
-                                But you cannot always afford that and have to live with what you have. At least most of
-                                it.
-                                Is your technology stack outdated? Performance below your expectations?
-                                Is it not able to scale? Are you afraid to touch it because it may break? Do not
-                                despair.
-                                Our team can help you bring a new life into your neglected product.
-                            </p>
-                        </div>
-                        <div class="col-lg-1"></div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <span class="anchor" id="design-poc"></span>
-                <div class="container-fluid mt-3">
-                    <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-12 col-md-5 col-lg-4">
-                            <div class="inline-img mb-3"><img src="../img/services/design-poc.jpg"/></div>
-                        </div>
-                        <div class="col-12 col-md-7 col-lg-6">
-                            <h5>design and prototyping</h5>
-                            <p>
-                                Have you got an idea that doesn't let you sleep at night? Do you think it would
-                                revolutionize your industry? But is it really something that would work? Is it even
-                                feasible?
-                                Or maybe you need some help in transforming a business idea into a product. We will be
-                                delighted to offer you our services.
-                            </p>
-                        </div>
-                        <div class="col-lg-1"></div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <span class="anchor" id="consulting"></span>
-                <div class="container-fluid mt-3">
-                    <div class="row">
-                        <div class="col-lg-1"></div>
-                        <div class="col-12 col-md-5 col-lg-4">
-                            <div class="inline-img mb-3"><img src="../img/services/consulting.jpg"/></div>
-                        </div>
-                        <div class="col-12 col-md-7 col-lg-6">
-                            <h5>code and delivery consulting</h5>
-                            <p>
-                                Is your code of high quality? Is it future proof? Is your software delivery team doing a
-                                good job? Are they following the best practices? Is there something they could do
-                                better?
-                                Can your software support your organisation well when it grows? We can help you answer
-                                all of those questions.
-                            </p>
-                        </div>
-                        <div class="col-lg-1"></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <div class="row">
-            <div class="col-md-5 col-lg-5"></div>
-            <div class="col-12 col-md-7 col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p>Interested to hear more or discuss your business?<br/>
-                            Not quite what you are looking for?<br/>
-                            Please get in touch to hear more!
-                        </p>
-                        <a href="../contact/" class="btn btn-warning text-white text-decoration-none">Get in touch</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1"></div>
-        </div>
+    <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 text-center"></div>
+    <div class="col-sm-3"></div>
     </div>
-</section>
-
-<div class="footer-section">
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-3">
-                <div class="logo"><img src="../img/logo.png" alt="Company logo"></div>
-                <span class="mb-0 ml-1 navbar-text text-white">codnos</span>
-                <p>
-                    At Codnos we use the latest technologies and best practices to help your business
-                    realize its full potential.
-                </p>
-                <div class="ccs-logo-container">
-                    <div class="ccs-logo"></div>
+    </div>
+    </div>
+---
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-12 col-lg-10">
+            <h2>services</h2>
+            <p>
+                We offer a wide range of services for our customers. We streamline your business
+                processes and help your business achieve its strategic goals.
+                Please read below high level description of how we can help you.
+            </p>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <ul class="list-with-icon">
+        <li>
+            <span class="anchor" id="bespoke-solutions"></span>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <div class="inline-img mb-3"><img src="../img/services/bespoke-solutions.jpg"/></div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6">
+                        <h5>bespoke solution development</h5>
+                        <p>
+                            Whether you have a well thought over project or just an idea that you want to test,
+                            we're here to help. Our team can help you at all stages of software delivery. We follow
+                            the
+                            best practices including SOLID, DDD, TDD, BDD, GoF Patterns, OOP, FP.
+                            The solution is easy to maintain and thoroughly tested. And it does what it says on the
+                            tin.
+                        </p>
+                    </div>
+                    <div class="col-lg-1"></div>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>LATEST NEWS</p>
-                <ul class="footer-section-links">
-                    {% for post in site.posts limit:5 %}
-                    <li><a class="py-2" href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
+        </li>
+        <li>
+            <span class="anchor" id="transformation"></span>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <div class="inline-img mb-3"><img src="../img/services/transformation.jpg"/></div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6">
+                        <h5>transforming existing products</h5>
+                        <p>
+                            Sometimes you would love to be able to start over and &quot;do it properly, this time&quot;.
+                            But you cannot always afford that and have to live with what you have. At least most of
+                            it.
+                            Is your technology stack outdated? Performance below your expectations?
+                            Is it not able to scale? Are you afraid to touch it because it may break? Do not
+                            despair.
+                            Our team can help you bring a new life into your neglected product.
+                        </p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>USEFUL LINKS</p>
-                <ul class="footer-section-links">
-                    <li><a class="py-2" href="../services/"><span>Services</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../how_we_work/#practices"><span>Practices We Follow</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../how_we_work/#technology"><span>Technology We Use</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../blog/"><span>Blog</span><i class="fas fa-angle-right text-right"></i></a></li>
-                    <li><a class="py-2" href="../about/"><span>About us</span><i class="fas fa-angle-right text-right"></i></a></li>
-                </ul>
+        </li>
+        <li>
+            <span class="anchor" id="design-poc"></span>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <div class="inline-img mb-3"><img src="../img/services/design-poc.jpg"/></div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6">
+                        <h5>design and prototyping</h5>
+                        <p>
+                            Have you got an idea that doesn't let you sleep at night? Do you think it would
+                            revolutionize your industry? But is it really something that would work? Is it even
+                            feasible?
+                            Or maybe you need some help in transforming a business idea into a product. We will be
+                            delighted to offer you our services.
+                        </p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-3">
-                <p>CONTACT</p>
-                <p>
-                    5 Carrwood Park<br/>
-                    Selby Road<br/>
-                    Leeds<br/>
-                    LS15 4LG<br/>
-                    United Kingdom
-                </p>
-                <ul class="footer-section-contact">
-                    <li>
-                        Email: <a href="mailto:info@codnos.com">info@codnos.com</a>
-                    </li>
-                    <li>
-                        Phone: +<span></span>4<span></span>4<span></span>&nbsp;7<span></span>7<span></span>1<span></span>1<span></span>&nbsp;0<span></span>2<span></span>1<span></span>7<span></span>3<span></span>1<span></span>
-                    </li>
-                </ul>
+        </li>
+        <li>
+            <span class="anchor" id="consulting"></span>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <div class="inline-img mb-3"><img src="../img/services/consulting.jpg"/></div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6">
+                        <h5>code and delivery consulting</h5>
+                        <p>
+                            Is your code of high quality? Is it future proof? Is your software delivery team doing a
+                            good job? Are they following the best practices? Is there something they could do
+                            better?
+                            Can your software support your organisation well when it grows? We can help you answer
+                            all of those questions.
+                        </p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="col-md-5 col-lg-5"></div>
+        <div class="col-12 col-md-7 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>Interested to hear more or discuss your business?<br/>
+                        Not quite what you are looking for?<br/>
+                        Please get in touch to hear more!
+                    </p>
+                    <a href="../contact/" class="btn btn-warning text-white text-decoration-none">Get in touch</a>
+                </div>
             </div>
         </div>
+        <div class="col-lg-1"></div>
     </div>
 </div>
-
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-3 py-1">
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 py-1">
-                <div>
-                    Copyright &copy; Codnos Ltd 2019. All rights reserved.
-                </div>
-                <div>
-                    Codnos Ltd is registered in United Kingdom. Number: 10080999
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-3 py-1 site-footer-social">
-                <a href="http://github.com/Codnos" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/codnos_ltd" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>
