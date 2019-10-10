@@ -204,3 +204,30 @@ ul.regular > li {
     height: 100%;
     width: 100%;
 }
+
+.thumb-img {
+    display: inline-block;
+    height: 10em;
+    width: 10em;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thumb-bespoke-solutions {
+    background-image: url('../img/services/bespoke-solutions.jpg');
+}
+
+.thumb-transformation {
+    background-image: url('../img/services/transformation.jpg');
+}
+
+.thumb-design-poc {
+    background-image: url('../img/services/design-poc.jpg');
+}
+
+.thumb-consulting {
+    background-image: url('../img/services/consulting.jpg');
+}
