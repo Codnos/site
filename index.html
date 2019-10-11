@@ -26,13 +26,12 @@ hero_header: |
 <span class="anchor" id="content"></span>
 <div class="container">
     <div class="row">
-        <div class="col-md-0 col-lg-3"></div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12">
             <h2>Latest posts</h2>
             <ul class="news">
                 {% for post in site.posts limit:5 %}
                 <li class="mb-4">
-                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                    <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
                     <span class="news-date">{{ post.date | date: "%Y-%m-%d" }}</span>
                     {{ post.excerpt }}
                     <a href="{{ post.url }}">Read more</a>
@@ -40,11 +39,9 @@ hero_header: |
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-md-0 col-lg-3"></div>
     </div>
     <div class="row">
-        <div class="col-md-0 col-lg-3"></div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12">
             <h2>What we do</h2>
             <p>
                 At Codnos we use the latest technologies, best practices and effort of thousands of open source
@@ -57,12 +54,9 @@ hero_header: |
             </p>
             <p>Please see below the services that we provide to our customers.</p>
         </div>
-        <div class="col-md-0 col-lg-3"></div>
     </div>
     <div class="row">
-        <div class="col-md-0 col-lg-3">
-        </div>
-        <div class="col-md-6 col-lg-3 my-4">
+        <div class="col-md-6 my-4">
             <div class="text-center">
                     <span class="d-inline-block mt-n4">
                         <div class="thumb-img mb-3 thumb-bespoke-solutions"></div>
@@ -70,7 +64,7 @@ hero_header: |
                 <h5><a href="services/#bespoke-solutions">Bespoke solution development</a></h5>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3 my-4">
+        <div class="col-md-6 my-4">
             <div class="text-center">
                     <span class="d-inline-block mt-n4">
                         <div class="thumb-img mb-3 thumb-transformation"></div>
@@ -78,13 +72,9 @@ hero_header: |
                 <h5><a href="services/#transformation">Transforming existing products</a></h5>
             </div>
         </div>
-        <div class="col-md-0 col-lg-3">
-        </div>
     </div>
     <div class="row">
-        <div class="col-md-0 col-lg-3">
-        </div>
-        <div class="col-md-6 col-lg-3 my-4">
+        <div class="col-md-6 my-4">
             <div class="text-center">
                     <span class="d-inline-block mt-n4">
                         <div class="thumb-img mb-3 thumb-design-poc"></div>
@@ -92,7 +82,7 @@ hero_header: |
                 <h5><a href="services/#design-poc">Design and prototyping</a></h5>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3 my-4">
+        <div class="col-md-6 my-4">
             <div class="text-center">
                     <span class="d-inline-block mt-n4">
                         <div class="thumb-img mb-3 thumb-consulting"></div>
@@ -100,12 +90,9 @@ hero_header: |
                 <h5><a href="services/#consulting">Code and delivery consulting</a></h5>
             </div>
         </div>
-        <div class="col-md-0 col-lg-3">
-        </div>
     </div>
     <div class="row">
-        <div class="col-md-0 col-lg-3"></div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <p> We provide a broad range of services which help our customers make full use of the software
@@ -116,6 +103,5 @@ hero_header: |
                 </div>
             </div>
         </div>
-        <div class="col-md-0 col-lg-3"></div>
     </div>
 </div>
