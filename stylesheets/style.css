@@ -238,12 +238,23 @@ ul.regular > li {
 
 
 .inline-img {
-    display: inline-block;
+    display: block;
 }
 
 .inline-img > img {
     height: 100%;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .inline-img > img {
+        object-fit: cover;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 70%;
+        height: auto;
+    }
 }
 
 .thumb-img {
