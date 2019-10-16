@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Codnos has got a new website
+comments: true
 ---
 New website is finally here. It has got a lot more content and should be much easier to navigate.
 

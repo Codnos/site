@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Codnos Ltd is now Crown Commercial Service Supplier
+comments: true
 ---
 We're pleased to announce that starting on 1 October 2019 Codnos Ltd is now
 approved to provide services as part of Crown Commercial Service's Digital Outcomes and Specialists 4.
