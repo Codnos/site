@@ -283,3 +283,8 @@ ul.regular > li {
 .thumb-consulting {
     background-image: url('../img/services/consulting.jpg');
 }
+
+pre.highlight {
+    padding: 0.5em;
+    margin-top: 1rem;
+}
