@@ -112,6 +112,10 @@ body {
     background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/blog.jpg');
 }
 
+.img-wsl {
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/blog/install-wsl-on-windows-10-without-store/header.png');
+}
+
 .footer-section {
     background-color: rgba(0, 0, 0, 0.9);
     color: rgba(255, 255, 255, 0.8);
@@ -164,7 +168,7 @@ ul.news {
 }
 
 ul.news > li {
-    display: inline-block;
+    display: block;
     margin-bottom: 1.5rem;
 }
 
@@ -287,4 +291,25 @@ ul.regular > li {
 pre.highlight {
     padding: 0.5em;
     margin-top: 1rem;
+}
+
+
+.post-thumb {
+    display: block;
+}
+
+.post-thumb > img {
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .post-thumb > img {
+        object-fit: cover;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: auto;
+    }
 }

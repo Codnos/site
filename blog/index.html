@@ -20,7 +20,14 @@ hero_header: |
             <li class="mb-4">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-3">
+                            {% if post.image %}
+                            <div class="post-thumb mb-3"><img src="{{ post.image }}"/></div>
+                            {% else %}
+                            <span>&nbsp;</span>
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
                                     <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
                                     <span class="news-date">{{ post.date | date: "%Y-%m-%d" }}</span>
                                     {{ post.excerpt }}

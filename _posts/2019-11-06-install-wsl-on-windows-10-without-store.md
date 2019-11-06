@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Installing WSL on Windows 10 without using Store
+additional_header_classes: img-wsl
+image: /img/blog/install-wsl-on-windows-10-without-store/thumbnail.png
 ---
 For many developers the ideal environment to operate in is *nix system.
 It's got all the necessary tooling, it allows automating everything easily using
