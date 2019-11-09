@@ -45,7 +45,7 @@ but which will provide you with the same end result.
 The [official installation instructions for manual install](https://docs.microsoft.com/en-us/windows/wsl/install-manual) are quite terse
 and don't necessarily cater for the complex setup that you are faced with in corporate environment.
 
-All the steps below assume that you have **Administrator access** to PowerShell.
+The step below assumes that you have **Administrator access** to PowerShell.
 Please start the session and use the following steps:
 
 - Make sure your system has got *Windows Subsystem for Linux* activated
