@@ -101,7 +101,7 @@ body {
 }
 
 .img-how-we-work {
-    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/how_we_work.jpg');
+    background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/how-we-work.jpg');
 }
 
 .img-contact {
