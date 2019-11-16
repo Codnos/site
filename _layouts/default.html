@@ -2,6 +2,15 @@
 <html lang="en-us">
 
 <head>
+    {% if jekyll.environment == 'production' %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151743151-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    {% endif %}
     <meta charset="UTF-8">
     <title>Codnos Ltd - {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/syntax.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/cookieconsent.min.css" />
     <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -85,6 +95,8 @@
                     <li><a class="py-2" href="/how-we-work/#technology"><span>Technology We Use</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="/blog/"><span>Blog</span><i class="fas fa-angle-right text-right"></i></a></li>
                     <li><a class="py-2" href="/about/"><span>About us</span><i class="fas fa-angle-right text-right"></i></a></li>
+                    <li><a class="py-2" href="/privacy-policy/"><span>Privacy Policy</span><i class="fas fa-angle-right text-right"></i></a></li>
+                    <li><a class="py-2" href="/cookie-policy/"><span>Cookie Policy</span><i class="fas fa-angle-right text-right"></i></a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-12 col-lg-3">
@@ -132,5 +144,73 @@
         </div>
     </div>
 </footer>
+{% if jekyll.environment == 'production' %}
+<script>
+var clearCookies = function () {
+    var cookies = document.cookie.split("; ");
+    for (var c = 0; c < cookies.length; c++) {
+        var d = window.location.hostname.split(".");
+        while (d.length > 0) {
+            var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
+            var p = location.pathname.split('/');
+            document.cookie = cookieBase + '/';
+            while (p.length > 0) {
+                document.cookie = cookieBase + p.join('/');
+                p.pop();
+            };
+            d.shift();
+        }
+    }
+}
+</script>
+<script src="/js/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#000"
+            },
+            "button": {
+              "background": "#f1d600"
+            }
+          },
+          revokable:true,
+          onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-out') {
+                if (!didConsent) {
+                    // disable cookies
+                    clearCookies();
+                } else {
+                    // enable cookies
+                    gtag('config', 'UA-151743151-1');
+                }
+            }
+          },
+          onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-out') {
+                if (!didConsent) {
+                    // disable cookies
+                    clearCookies();
+                } else {
+                    // enable cookies
+                    gtag('config', 'UA-151743151-1');
+                }
+            }
+          },
+          "type": "opt-out",
+          "content": {
+            "message": "This website uses cookies to help us understand how people use it and to ensure you can use features like commenting and sharing our contents.",
+            "dismiss": "Got it!",
+            "deny": "Decline",
+            "link": "Read our cookie policy",
+            "href": "/cookie-policy"
+          }
+        });
+</script>
+{% endif %}
 </body>
 </html>
