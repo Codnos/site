@@ -183,9 +183,10 @@ var clearCookies = function () {
                 if (!didConsent) {
                     // disable cookies
                     clearCookies();
+                    window['ga-disable-UA-151743151-1'] = true;
                 } else {
                     // enable cookies
-                    gtag('config', 'UA-151743151-1');
+                    gtag('config', 'UA-151743151-1', { 'anonymize_ip': false });
                 }
             }
           },
@@ -196,9 +197,10 @@ var clearCookies = function () {
                 if (!didConsent) {
                     // disable cookies
                     clearCookies();
+                    window['ga-disable-UA-151743151-1'] = true;
                 } else {
                     // enable cookies
-                    gtag('config', 'UA-151743151-1');
+                    gtag('config', 'UA-151743151-1', { 'anonymize_ip': false });
                 }
             }
           },
