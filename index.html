@@ -29,7 +29,7 @@ hero_header: |
         <div class="col-md-12">
             <h2>Latest posts</h2>
             <ul class="news">
-                {% for post in site.posts limit:5 %}
+                {% for post in site.posts limit:3 %}
                 <li class="mb-4">
                     <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
                     <span class="news-date">{{ post.date | date: "%Y-%m-%d" }}</span>

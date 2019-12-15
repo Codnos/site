@@ -116,6 +116,16 @@ body {
     background-image: linear-gradient( rgba(0,0,0,.28), rgba(0,0,0,.28) ), url('../img/blog/install-wsl-on-windows-10-without-store/header.png');
 }
 
+.img-docker-desktop-windows-10-home {
+    background-image: url('../img/blog/install-docker-desktop-on-windows-10-home/header.png');
+    background-color: #2396ed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: right 5em;
+}
+
 .footer-section {
     background-color: rgba(0, 0, 0, 0.9);
     color: rgba(255, 255, 255, 0.8);
