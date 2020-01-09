@@ -13,7 +13,7 @@
     </script>
     {% endif %}
     <meta charset="UTF-8">
-    <title>Codnos Ltd - {{ page.title }}</title>
+    <title>{{ page.title }} | Codnos Ltd</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/stylesheets/fontawesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/solid.min.css"/>
@@ -27,6 +27,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     {% if page.image %}
     <meta property="og:image" content="{{ page.image }}">
+    {% endif %}
+    <meta name="robots" content="index,follow"/>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}"/>
     {% endif %}
 </head>
 
